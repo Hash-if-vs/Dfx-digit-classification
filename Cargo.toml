@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/machine_learning_sample_backend"
+]
+resolver = "2"

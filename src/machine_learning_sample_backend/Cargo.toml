@@ -1,0 +1,18 @@
+[package]
+name = "machine_learning_sample_backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.8"
+ic-cdk = "0.7"
+burn = { git  = "https://github.com/burn-rs/burn",  default-features = false }
+burn-ndarray = { git = "https://github.com/burn-rs/burn", default-features = false }
+serde = "*"
+# wasm-bindgen = "0.2.86"
+getrandom = { version = "*", features = ["custom"] }

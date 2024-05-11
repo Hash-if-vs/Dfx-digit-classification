@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "machine_learning_sample_backend": {
+      "candid": "src/machine_learning_sample_backend/machine_learning_sample_backend.did",
+      "package": "ic_mnist_backend",
+      "type": "rust",
+      "gzip": true
+    },
+    "machine_learning_sample_frontend": {
+      "dependencies": [
+        "machine_learning_sample_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/machine_learning_sample_frontend/src/index.html"
+      },
+      "source": [
+        "src/machine_learning_sample_frontend/assets",
+        "dist/machine_learning_sample_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
